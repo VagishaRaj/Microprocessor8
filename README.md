@@ -29,6 +29,8 @@ The whole microprocessor design is divided into 5 parts:
 <img width="836" alt="Screenshot 2024-08-24 at 10 27 52 PM" src="https://github.com/user-attachments/assets/80bb4b5a-a44a-4add-b688-5bde616186af">
 
 ## State Diagram:
+This is a state diagram that shows the process of obtaining output based on the given input.
+
 
 
 
