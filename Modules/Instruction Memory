@@ -1,8 +1,8 @@
-module instruction_Memory (input Enable, input ReadWrite, input [3:0] Address, input [7:0] DataIn, output reg [7:0] DataOut);
+module instruction_Memory (input Enable, input ReadWrite, input [3:0] Address, input [7:0] Instr_In, output reg [7:0] Instr_Out);
 reg [7: 0] instruction_Mem [0:255]; // 256 x 8 memory
-always @ (Enable,ReadWrite,Address,DataIn)
+always @ (Enable,ReadWrite,Address,Instr_In)
  if (Enable)
- if (ReadWrite) DataOut = instruction_Mem [Address]; // Read
- else instruction_Mem [Address] = DataIn; // Write
- else DataOut = 8'bz; // High impedance state
+ if (ReadWrite) Instr_Out = instruction_Mem [Address]; // Read
+ else instruction_Mem [Address] = Instr_In; // Write
+ else Instr_Out = 8'bz; // High impedance state
 endmodule
